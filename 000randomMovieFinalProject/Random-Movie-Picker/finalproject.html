@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Generator</title>
+    <link rel="stylesheet" href="finalproject.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Scary Movie Night Randomizer</h1>
+    <p class="tiny center">"Movies don't create psychos; movies make psychos more creative."</p>
+    <div id="flexbox">
+        <div class="first-section">
+            <div>
+                <form action="">
+                    <label for="add-movie" class="input-directions">Add movies to your picklist</label>
+                    <input type="text" id="add-movie"> <br>
+                    <button id="add-button">Add</button>
+                </form>
+
+                <!-- below this line is the new code -->
+
+                <form action="">
+                    <label for="del-movie" class="input-directions">Delete a movie from your picklist</label>
+                    <input type="text" id="del-movie"> <br>
+                    <button id="del-button">Delete</button>
+                </form>
+
+
+                <!-- above this line is the new code -->
+
+                <h3 id="main-question" class="title-question">What movie should you watch tonight?</h3>
+                <p id="movie-selected" class="movie-selected"></p>
+                <audio id="sound-effect" src="mixkit-terror-transition-2484.wav"></audio>
+                <button id="select-button">I want to play a game...</button>
+            </div>
+            <div>
+                <button id="show-list">Show List</button>
+                <button id="hide-list">Hide List</button>
+            </div>
+            <div id="list-div">
+                <ul id="ul-movies" class="ul-movies"></ul>
+            </div>
+        </div>
+        <div class="second-box">
+            <form action="">
+                <label for="indecision" class="input-directions">Can't decide between a few?...</label>
+                <input type="text" id="indecision-input"> <br>
+            </form>
+            <p class="tiny">(Add the movies to choose from...)</p>
+            <ul id="indecision-list" class="indecision-list"></ul>
+            <p id="indecision-choice" class="indecision-choice pre-indecision"></p>
+            <button id="indecision-button">Add</button>
+            <button id="choose-or-die-btn" class="indecision-button">Live or die. Make your choice</button>
+            <audio id="sound-effect2" src="mixkit-terror-sweep-of-darkness-2630.wav"></audio>
+            <button id="reset-button">Reset</button>
+        </div>
+    </div>
+    <script src="finalproject.js"></script>
+</body>
+
+</html>

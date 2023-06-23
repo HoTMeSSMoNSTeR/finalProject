@@ -1,0 +1,217 @@
+@font-face {
+    src: url("shlop\ rg.ttf");
+    font-family: "shlop";
+
+}
+
+body {
+    background-image: url("skull.jpg");
+    background-size: cover;
+    background-position: center;
+    cursor: url('icons8-ghost-32.png') 25 15, auto;
+}
+
+
+h1 {
+    font-family: "shlop";
+    font-size: 350%;
+    letter-spacing: 2px;
+    color: #790704;
+    text-align: center;
+    text-shadow: 0 0 2px black;
+    margin-bottom: 10px;
+
+}
+
+#flexbox {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.second-box {
+    margin-top: 7%;
+    margin-left: 15%;
+}
+
+.first-section {
+    margin-top: 40px;
+    margin-left: 10%;
+}
+
+.tiny {
+    font-size: 15px;
+    font-family: 'Amatic SC', cursive;
+    color: white;
+    text-shadow: 0 0 5px black;
+    margin-left: 15px;
+    margin-top: 2px;
+}
+
+.center {
+    text-align: center;
+}
+
+/* .movie-selected,
+.indecision-choice {
+    font-family: "shlop";
+    letter-spacing: 1px;
+    color: #790704;
+    font-size: 400%;
+    margin-left: 20%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 1px black;
+} */
+
+.indecision-choice,
+.movie-selected {
+    font-family: "shlop";
+    letter-spacing: 1px;
+    font-size: 400%;
+    color: #790704;
+    margin-left: 25%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 1px black;
+}
+
+.pre-indecision {
+    display: none;
+}
+
+.post-indecision {
+    animation: 8s fadeIn -0.1s;
+}
+
+.movie-selected {
+    animation: fadeOutIn 3s 10s;
+}
+
+.input-directions {
+    font-family: 'Amatic SC', cursive;
+    color: white;
+    text-shadow: 0 0 5px black;
+    font-size: x-large;
+    padding: 3px 6px;
+    margin: 3px 6px;
+
+}
+
+#main-question {
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    color: white;
+    font-size: x-large;
+    text-shadow: 0 0 5px black;
+}
+
+input[type="text"] {
+    background: transparent;
+    border: 2px solid #790704;
+    color: white;
+    font-family: 'Amatic SC', cursive;
+    font-size: large;
+    font-weight: bold;
+    box-shadow: 0 0 1px white;
+}
+
+button {
+    background-color: #790704;
+    color: white;
+    font-size: medium;
+    text-shadow: -1px 1px 5px black;
+    border: none;
+    font-family: 'Amatic SC', cursive;
+    padding: 5px 30px;
+    border-radius: 5px;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+
+button:hover {
+    box-shadow: 0 0 10px black;
+    background-color: black;
+    color: black;
+    text-shadow: 0 0 100px white;
+    cursor: url('icons8-ghost-32.png') 25 15, auto;
+}
+
+
+#add-button,
+#del-button {
+    margin-left: 10%;
+}
+
+#select-button {
+    margin-bottom: 15px;
+}
+
+.ul-movies,
+.indecision-list {
+    list-style: none;
+    text-shadow: 0 0 3px white;
+    font-family: 'Amatic SC', cursive;
+    font-size: x-large;
+    font-weight: 700;
+}
+
+.indecision-list {
+    color: white;
+}
+
+/* .invisible {
+    display: none;
+}
+
+.visible {
+    display: block;
+} */
+
+@keyframes fadeOutIn {
+
+    0% {
+        opacity: 0
+    }
+
+    13% {
+        opacity: 1
+    }
+
+    25% {
+        opacity: 0
+    }
+
+    35% {
+        opacity: 0.5
+    }
+
+    50% {
+        opacity: 0
+    }
+
+    60% {
+        opacity: 1
+    }
+
+    75% {
+        opacity: 0.5
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
