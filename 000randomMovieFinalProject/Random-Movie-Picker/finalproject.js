@@ -21,6 +21,7 @@ if (!localStorage.getItem('movies')) {
 // localStorage.setItem("moviesList", JSON.stringify(moviesList))
 
 
+// grabbing all my elements that I will need to use by their id's
 let movieSelected = document.getElementById("movie-selected")
 const selectBtn = document.getElementById("select-button")
 const addBtn = document.getElementById("add-button")
@@ -38,10 +39,12 @@ const chooseBtn = document.getElementById("choose-or-die-btn")
 const indecisionChoice = document.getElementById("indecision-choice")
 const resetBtn = document.getElementById("reset-button")
 const soundEffect2 = document.getElementById("sound-effect2")
+
+
 let listTwo = []
 
 
-
+// button that lets user add movie to the hard coded list and updates the local storage
 addBtn.addEventListener('click', function (event) {
     event.preventDefault()
     moviesList.push(addMovie.value)
@@ -49,6 +52,7 @@ addBtn.addEventListener('click', function (event) {
     localStorage.setItem('movies', JSON.stringify(moviesList))
 })
 
+// button that allows user to delete movie from the hard coded list and updates local storage
 delBtn.addEventListener('click', function (event) {
     event.preventDefault()
     let index = moviesList.indexOf(delMovie.value)
@@ -58,8 +62,7 @@ delBtn.addEventListener('click', function (event) {
     localStorage.setItem('movies', JSON.stringify(moviesList))
 })
 
-
-
+// button that picks and displays chosen movie title randomly from the lost
 selectBtn.addEventListener('click', function () {
     const storedMovies = JSON.parse(localStorage.getItem('movies'))
     function getRandomMovie() {
@@ -70,14 +73,6 @@ selectBtn.addEventListener('click', function () {
     soundEffect.play()
 })
 
-// showList.addEventListener('click', function () {
-//     let listItem = ''
-//     const storedMovies = JSON.parse(localStorage.getItem('moviesList'))
-//     for (let i = 0; i < storedMovies.length; i++) {
-//         listItem += `<li>${storedMovies[i]}</li>`
-//     }
-//     ulMovies.innerHTML = listItem
-// })
 
 showList.addEventListener('click', function () {
     const storedMovies = JSON.parse(localStorage.getItem('movies'))
