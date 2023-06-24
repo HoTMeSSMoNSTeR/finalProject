@@ -50,8 +50,6 @@ addBtn.addEventListener('click', function (event) {
     localStorage.setItem('movies', JSON.stringify(moviesList))
 })
 
-// new code below
-
 delBtn.addEventListener('click', function (event) {
     event.preventDefault()
     let index = moviesList.indexOf(delMovie.value)
@@ -61,8 +59,6 @@ delBtn.addEventListener('click', function (event) {
     localStorage.setItem('movies', JSON.stringify(moviesList))
 })
 
-
-// new code above
 
 
 selectBtn.addEventListener('click', function () {
